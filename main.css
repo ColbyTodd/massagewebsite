@@ -6,8 +6,30 @@ body {
 .navbar {
     background:#45b3e0;
 }
-.nav-link,
-.navbar-brand {
+.logo-hover{
+    display: none;
+}
+.logo-hover,
+.logo{
+    width: 90%;
+    height: auto;
+    cursor: pointer;
+}
+.logo{
+    display: block;
+}
+.nav-logo{
+    width: 5%;
+    height: 5%;
+}
+.nav-logo:hover .logo{
+    display: none;
+}
+.nav-logo:hover .logo-hover{
+    display: block;
+}
+.navbar-brand,
+.nav-link{
     color: #fff;
     cursor: pointer;
 }
@@ -15,7 +37,7 @@ body {
     margin-right: 1em !important;
 }
 .nav-link:hover {
-    color: #45b3e0;
+    color: #c9e9f6;
 }
 .navbar-collapse {
     justify-content: flex-end;
