@@ -3,7 +3,8 @@ body {
     margin: 0;
     background:#f3fafd;
 }
-.navbar {
+.navbar,
+.footer {
     background:#45b3e0;
 }
 .logo-hover{
@@ -59,4 +60,13 @@ body {
     max-width: 145px;
     margin-right: 25px;
     margin-left: 25px;
+}
+.features .form-control,
+.features input {
+	border-radius: 0;
+}
+.btn-send {
+    width: 10%;
+    min-width: 100px;
+    max-width: 145px;
 }
