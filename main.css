@@ -43,3 +43,20 @@ body {
 .navbar-collapse {
     justify-content: flex-end;
 }
+.carousel-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.btn-primary {
+    background: #45b3e0;
+    border: #45b3e0
+}
+.btn-location {
+    width: 10%;
+    min-width: 100px;
+    max-width: 145px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
