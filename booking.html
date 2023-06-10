@@ -80,11 +80,12 @@
                 </div>
                 <div class="col-md-6">
                     <label for="inputExpert" class="form-label">Date time</label>
-                    <select class="form-select" id="inputExpert">
-                        <option>John Doe</option>
-                        <option>John Doe</option>
-                        <option>John Doe</option>
-                    </select>
+                    <div class='input-group date' id='datetimepicker1' data-provide="datepicker">
+                        <input type='datetime-local' class="form-control"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
                 </div>
                 <div class="col-12 text-end">
                     <button type="button" class="btn btn-primary btn-send" data-bs-toggle="modal" data-bs-target="#confirmation">
