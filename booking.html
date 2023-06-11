@@ -50,16 +50,17 @@
         <div class="container-sm py-5">
             <form class="row g-3">
                 <div class="col-md-6">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="name" class="form-control" id="inputName">
+                </div>
+                <div class="col-md-6 pb-1">
                     <label for="inputEmail" class="form-label">Email</label>
                     <input type="email" class="form-control" id="inputEmail">
                 </div>
                 <div class="col-md-6 pb-1">
-                    <label for="inputPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="inputPassword">
-                </div>
-                <div class="col-md-6 pb-1">
                     <label for="inputService" class="form-label">Service</label>
                     <select class="form-select" id="inputService">
+                        <option></option>
                         <option>Massage Therapy</option>
                         <option>Osteopathy</option>
                         <option>Acupuncture</option>
@@ -68,6 +69,7 @@
                 <div class="col-md-6">
                     <label for="inputLocation" class="form-label">Location</label>
                     <select class="form-select" id="inputLocation">
+                        <option></option>
                         <option>Barrhaven</option>
                         <option>Kanata</option>
                         <option>Merivale</option>
@@ -76,9 +78,7 @@
                 <div class="col-md-6 pb-1">
                     <label for="inputExpert" class="form-label">Expert</label>
                     <select class="form-select" id="inputExpert">
-                        <option>John Doe</option>
-                        <option>John Doe</option>
-                        <option>John Doe</option>
+                        <option>Choose a location first</option>
                     </select>
                 </div>
                 <div class="col-md-6">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="col-12 text-end">
-                    <button type="button" class="btn btn-primary btn-send" data-bs-toggle="modal" data-bs-target="#confirmation">
+                    <button type="button" class="btn btn-primary btn-send" data-bs-toggle="modal" data-bs-target="#confirmation" id="submitButton">
                         Submit
                     </button>
                 </div>
