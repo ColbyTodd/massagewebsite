@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'amore_mio';
+    src: url('webfontkit-20230611-164926/amoremiopersonaluse-yap5-webfont.woff2') format('woff2'),
+         url('webfontkit-20230611-164926/amoremiopersonaluse-yap5-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'gobold';
+    src: url('webfontkit-20230611-170330/gobold_bold-webfont.woff2') format('woff2'),
+         url('webfontkit-20230611-170330/gobold_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.carousel-caption {
+    font-family: 'gobold';
+}
 body {
     padding: 0;
     margin: 0;
@@ -28,6 +47,9 @@ body {
 }
 .nav-logo:hover .logo-hover{
     display: block;
+}
+.navbar-brand {
+    font-family: 'amore_mio';
 }
 .navbar-brand,
 .nav-link{
