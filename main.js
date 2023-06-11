@@ -38,19 +38,19 @@ var targetSelect = document.getElementById('inputExpert');
 
       // Add new options based on the source field value
       if (inputValue === 'Barrhaven') {
-        addOption('Karen', 'option1');
-        addOption('Henry', 'option2');
-        addOption('Kathy', 'option3');
+        addOption('Karen', 'Karen');
+        addOption('Henry', 'Henry');
+        addOption('Kathy', 'Kathy');
       } else if (inputValue === 'Kanata') {
-        addOption('John', 'option1');
-        addOption('Jane', 'option2');
-        addOption('Lola', 'option3');
+        addOption('John', 'John');
+        addOption('Jane', 'Jane');
+        addOption('Lola', 'Lola');
       } else if (inputValue === 'Merivale') {
-        addOption('Isabella', 'option1');
-        addOption('Brad', 'option2');
-        addOption('Miles', 'option3');
+        addOption('Isabella', 'Isabella');
+        addOption('Brad', 'Brad');
+        addOption('Miles', 'Miles');
       } else {
-            addOption('Choose a location first', 'option1');
+            addOption('Choose a location first', '');
       }
       // Add more conditionals as needed for different values
 
@@ -84,7 +84,16 @@ dateInput.addEventListener('input', checkFormFields);
 function checkFormFields() {
   if (nameInput.value !== '' && emailInput.value !== '' && serviceInput.value !== '' && locationInput.value !== '' && expertInput.value !== 'Choose a location first') {
     submitButton.disabled = false;
+    setTextInModal('Your ' + serviceInput.value +  ' for ' + nameInput.value + ' at ' + locationInput.value + ' on ' + Date(dateInput.value) + ' with ' + expertInput.value + ' has been booked.');
   } else {
     submitButton.disabled = true;
   }
+}
+
+// Get reference to the modal text element
+var modalTextElement = document.getElementById('modalText');
+
+// Function to set the text in the modal
+function setTextInModal(text) {
+  modalTextElement.textContent = text;
 }
