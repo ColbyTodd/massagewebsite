@@ -4,6 +4,19 @@ function goToNewPage(location) {
     window.location.href = url;
   }
 
+  var sourceField = document.getElementById('inputLocation');
+  var targetSelect = document.getElementById('inputExpert');
+  
+      // Add event listener to the source field
+      sourceField.addEventListener('input', updateSelectOptions);
+// Function to add an option to the select element
+function addOption(text, value) {
+    var option = document.createElement('option');
+    option.text = text;
+    option.value = value;
+    targetSelect.add(option);
+  }
+
 window.onload = function() {
     document.getElementById('submitButton').disabled = true;
 
@@ -11,23 +24,29 @@ window.onload = function() {
     var text = urlParams.get('text');
     switch(text){
         case 'Barrhaven':
+            targetSelect.innerHTML = '';
+            addOption('Karen', 'Karen');
+            addOption('Henry', 'Henry');
+            addOption('Kathy', 'Kathy');
             document.getElementById("inputLocation").selectedIndex = 1;
             break;
         case 'Kanata':
+            targetSelect.innerHTML = '';
+            addOption('John', 'John');
+            addOption('Jane', 'Jane');
+            addOption('Lola', 'Lola');
             document.getElementById("inputLocation").selectedIndex = 2;
             break;
         case 'Merivale':
+            targetSelect.innerHTML = '';
+            addOption('Isabella', 'Isabella');
+            addOption('Brad', 'Brad');
+            addOption('Miles', 'Miles');
             document.getElementById("inputLocation").selectedIndex = 3;
             break;
     }
     
 }
-
-var sourceField = document.getElementById('inputLocation');
-var targetSelect = document.getElementById('inputExpert');
-
-    // Add event listener to the source field
-    sourceField.addEventListener('input', updateSelectOptions);
 
     // Function to update the options of the target select
     function updateSelectOptions() {
@@ -51,15 +70,6 @@ var targetSelect = document.getElementById('inputExpert');
         addOption('Miles', 'Miles');
       } else {
             addOption('Choose a location first', '');
-      }
-      // Add more conditionals as needed for different values
-
-      // Function to add an option to the select element
-      function addOption(text, value) {
-        var option = document.createElement('option');
-        option.text = text;
-        option.value = value;
-        targetSelect.add(option);
       }
     }
 
