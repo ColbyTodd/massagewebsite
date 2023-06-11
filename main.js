@@ -11,13 +11,13 @@ window.onload = function() {
     var text = urlParams.get('text');
     switch(text){
         case 'Barrhaven':
-            document.getElementById("inputLocation").selectedIndex = 0;
-            break;
-        case 'Kanata':
             document.getElementById("inputLocation").selectedIndex = 1;
             break;
-        case 'Merivale':
+        case 'Kanata':
             document.getElementById("inputLocation").selectedIndex = 2;
+            break;
+        case 'Merivale':
+            document.getElementById("inputLocation").selectedIndex = 3;
             break;
     }
     
