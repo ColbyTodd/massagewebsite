@@ -69,7 +69,7 @@ var emailInput = document.getElementById('inputEmail');
 var serviceInput = document.getElementById('inputService');
 var locationInput = document.getElementById('inputLocation');
 var expertInput = document.getElementById('inputExpert');
-var dateInput = document.getElementById('datetimepicker1');
+var dateInput = document.getElementById('datetimeInput');
 var submitButton = document.getElementById('submitButton');
 
 // Add event listeners to the form fields
@@ -97,3 +97,6 @@ var modalTextElement = document.getElementById('modalText');
 function setTextInModal(text) {
   modalTextElement.textContent = text;
 }
+
+var currentDateTime = new Date().toISOString().slice(0, 16);
+dateInput.setAttribute('min', currentDateTime)
